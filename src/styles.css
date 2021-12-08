@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background:linear-gradient( #fff , #E7E7E7);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction:column
+  }
+
+  .btn , .btn:visited {
+    border-color: #C63A18;
+    background-color: #C63A18;
+    font-size: 2rem;
+    width: 310px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+  }
+  .btn:hover , .btn:active  {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+  }
+  .btn:focus {
+    box-shadow: none;
+  }
+        
