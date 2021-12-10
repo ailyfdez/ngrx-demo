@@ -1,12 +1,13 @@
 import { createAction, props } from '@ngrx/store';
 
-//save user action
-export const saveUser = createAction(
-  '[child comp] save user',
-  props<{ user: string }>()
+//get amount action
+export const getAmount = createAction(
+  '[Bank account] get amount'
 );
 
-//get user action
-export const getUser = createAction(
-  '[child comp] get user'
+//save amount action
+export const saveAmount = createAction(
+  '[Bank account] save amount',
+  props<{ amount: number }>()
 );
+

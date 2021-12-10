@@ -8,8 +8,8 @@ import { Observable, of } from "rxjs";
   export class ChildService {
     constructor(/*private http: HttpClient*/) { }
   
-    public getUser(): Observable<string> {
-        return of("Endava");
-     // return this.http.get<string>('api/user');
+    public getAmount(): Observable<number> {
+        return of(10);
+     // return this.http.get<string>('api/bank_accout/amount');
     }
 }

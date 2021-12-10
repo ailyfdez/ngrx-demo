@@ -24,7 +24,7 @@ import { environment } from '../environments/environment';
     CommonModule,
     BrowserModule,
     NgbModule,
-    StoreModule.forRoot({ child: childReducer }),
+    StoreModule.forRoot({ 'bank account': childReducer }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([ChildEffects]),
   ],

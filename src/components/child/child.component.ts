@@ -8,9 +8,9 @@ import * as childAction from './chilld.action';
   templateUrl: './child.component.html',
 })
 export class ChildComponent {
-  constructor(private store: Store<childReducer.ChildState>) { }
+  constructor(private store: Store<childReducer.BankAccountState>) { }
 
-  dispatchUser() {
-    this.store.dispatch(childAction.getUser());
+  dispatchAction() {
+    this.store.dispatch(childAction.getAmount());
   }
 }

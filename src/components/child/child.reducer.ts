@@ -1,21 +1,21 @@
 import { createReducer, on } from '@ngrx/store';
-import { saveUser } from './chilld.action'
+import { saveAmount } from './chilld.action'
 
 // state interface
-export interface ChildState {
-    user: string
+export interface BankAccountState {
+    amount: number
 }
 
 //initial state object
-export const initialState: ChildState = {
-    user: "Nahuel"
+export const initialState: BankAccountState = {
+    amount: 0
 };
 
 export const childReducer = createReducer(
     initialState,
-    on(saveUser, (state, { user }) => ({
+    on(saveAmount, (state, { amount }) => ({
         ...state,
-        user
+        amount
     })),
 );
 

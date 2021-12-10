@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Store, createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { initialState, ChildState } from './child.reducer';
+import { initialState, BankAccountState } from './child.reducer';
 
 //select feature state
-const getChildState = createFeatureSelector<ChildState>('child');
+const getBankAccountState = createFeatureSelector<BankAccountState>('bank account');
 
 // select specific property from feature state
-const getUser = createSelector(getChildState, (state: ChildState) => (state ? state.user : initialState.user));
+const getAmount = createSelector(getBankAccountState, (state: BankAccountState) => (state ? state.amount : initialState.amount));
 
 @Injectable()
 export class ChildSelectors {
-  constructor(private store: Store<ChildState>) { }
+  constructor(private store: Store<BankAccountState>) { }
 
-  get user$() {
-    return this.store.select(getUser);
+  get amount$() {
+    return this.store.select(getAmount);
   }
 }

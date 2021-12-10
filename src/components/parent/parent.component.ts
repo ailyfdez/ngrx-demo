@@ -6,15 +6,15 @@ import { ChildSelectors } from '../child/child.selector';
   templateUrl: './parent.component.html',
 })
 export class ParentComponent {
-  userName: string = "";
+  amount: number = 0;
 
   constructor(private childSelector: ChildSelectors) {
 
   }
   
   ngOnInit() {
-    this.childSelector.user$.subscribe(name => {
-      this.userName = name;
+    this.childSelector.amount$.subscribe(value => {
+      this.amount = value;
     });
   }
 }
